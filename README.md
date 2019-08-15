@@ -45,4 +45,4 @@ Available Commands:
 - `version` (`v`) Outputs Angular CLI version.
 - `xi18n` Extracts i18n messages from source code.
 
-For more detailed help run "ng [command name] --help"
+For more detailed help run "`ng [command name] --help`"
