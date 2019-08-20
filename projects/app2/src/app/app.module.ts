@@ -2,16 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PhoneComponent } from './phone/phone.component';
-import { CoffeeDirective } from './coffee.directive';
-import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PhoneComponent,
-    CoffeeDirective,
-    ProductComponent
+    AppComponent
   ],
   imports: [
     BrowserModule

@@ -52,3 +52,19 @@ Available Commands:
 - `xi18n` Extracts i18n messages from source code.
 
 For more detailed help run "`ng [command name] --help`"
+
+## The ng generate command of Angular CLI
+
+You can keep using Angular CLI for generating artifacts by using the `ng generate` command or its alias `ng g`.
+
+- `ng g c` — Generates a new component.
+- `ng g s` — Generates a new service.
+- `ng g d` — Generates a new directive.
+- `ng g m` — Generates a new module.
+- `ng g application` — Generates a new app within the same project.
+- `ng g library` - Generate a library project.
+
+Run the `ng generate [option] --help` command or refer to the Angular CLI documentation.
+
+This command will create the src/app/product directory with the product.component .ts file with inline style and inline template, without test spec.
+  `ng g c product -s -t --skip-tests true`
