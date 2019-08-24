@@ -66,5 +66,8 @@ You can keep using Angular CLI for generating artifacts by using the `ng generat
 
 Run the `ng generate [option] --help` command or refer to the Angular CLI documentation.
 
-This command will create the src/app/product directory with the product.component .ts file with inline style and inline template, without test spec.
+This command will create the src/app/product directory with the product.component.ts file with inline style and inline template, without test spec.
   `ng g c product -s -t --skip-tests true`
+
+Generating a service in a shared folder:
+  `ng g s shared/<name-service> --project=<project-name>`
