@@ -71,3 +71,43 @@ This command will create the src/app/product directory with the product.componen
 
 Generating a service in a shared folder:
   `ng g s shared/<name-service> --project=<project-name>`
+
+If you’re interested in analyzing the properties of the event object, add the `$event` argument to the method handler. In particular, the `target` property of the event object represents the DOM node where the event occurred. The instance of the event object will be available only within the binding scope (that is, in the event-handler method).
+ `<input (input)="onInputEvent($event)">`
+How to get input value:
+  `$event.target.value`
+
+If you also want Angular CLI to open the browser to <http://localhost:4200>, add the `-o` to the preceding command:
+  `ng serve  <app-name> -o`
+
+Can't bind to 'ngModel' since it isn't a known property of 'input':
+
+  In the app.module.ts:
+
+  ```typescript
+  import { FormsModule } from '@angular/forms';
+
+  [...]
+
+  @NgModule({
+    imports: [
+      [...]
+      FormsModule
+    ],
+    [...]
+  })
+  ```
+
+  Remember, square brackets represent property binding, and parentheses represent event binding. To denote two-way binding, surround a template element’s ngModel with both square brackets and parentheses.
+
+  ```html
+  <input
+    type="text"
+    placeholder="Enter shipping address"
+    [(ngModel)]="shippingAddress"
+  />
+  <button (click)="shippingAddress = '123 Main Street'">
+    Set Default Address
+  </button>
+  <p>The shipping address is {{ shippingAddress }}</p>
+  ```
